@@ -65,51 +65,103 @@ html, body {
 
 @light: white;
 
-.body {
+.mixins {
+	font-size: 5rem;
+	color: purple;
+}
+
+.secondthought {
+	font-size: 2rem;
+	color: aqua;
+}
 
 .container {
 	width: 800px;
-	margin: 50px auto;
+	margin: auto;
+	background-color: @vision;
 
 	h1 {
-		font-size: 50rem;
-		background-color: @deepsea;
+		.mixins();
 		text-align: center;
-
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 	
 	h2 {
-		font-size 8rem;
+		.secondthought();
 		background-color: @darkness;
 		text-align: center;
-
+		padding-top: 25px;
+		padding-bottom: 25px;
 	}
+	img {
+		width: 800px;
+		margin: auto;
+	}	
+}
+
+.sidebar {
+	display: flex;
+	width: 800px;
+	margin: auto;
+
 	nav {
+		width: 150px;
+		height: 180px;
 		a {
 
-		background-color: @light;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		text-decoration: none;
+			background-color: @darkness;
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: space-between;
+			text-decoration: none;
+			.secondthought ();
+			height: 100%;
+			@media (max-width: 500px){
+				color: @light;
+				width: 100%;
+			}
+		}
+	}
+
+
+	.after {
+		width: 800px;
+		margin: auto;
+		background-color: @vision;
+		height: auto;
+		text-align: center;
+	
+		main {
+			font-size: 1.5rem;
+			color: @light;
+			p {
+				margin: 10px;
+			}
 		}
 
+		section {
+			font-size: 1.5rem;
+			color: @light;
+			p {
+				margin: 10px;
+			}
+		}
+
+		ul{
+			font-size: 2rem;
+			border: 1px solid @light;
+			text-align: center;
+			width: 48%;
+			border-bottom: 1px solid @light;
+			margin: 1px;
+			padding: 6px;
+		}
+		padding-bottom: 20px;
+		padding-left: 20px;
 	}
 }
 
-.main{
-	p {
 
-	}
-}
 
-.section{
-	p {
-
-	}
-
-	ul{
-
-	}
-}
-}
