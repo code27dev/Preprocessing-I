@@ -145,7 +145,8 @@ body {
 .container {
   width: 800px;
   margin: auto;
-  background-color: red;
+  background-color: black;
+  height: 500px;
 }
 .container h1 {
   font-size: 5rem;
@@ -153,6 +154,7 @@ body {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-family: 'Lobster', cursive;
 }
 .container h2 {
   font-size: 2rem;
@@ -161,6 +163,7 @@ body {
   text-align: center;
   padding-top: 25px;
   padding-bottom: 25px;
+  font-family: 'Lobster', cursive;
 }
 .container img {
   width: 800px;
@@ -173,7 +176,11 @@ body {
 }
 .sidebar nav {
   width: 150px;
-  height: 180px;
+  height: 185px;
+  margin-top: 0;
+}
+.sidebar nav a:hover {
+  color: blue;
 }
 .sidebar nav a {
   background-color: black;
@@ -182,6 +189,8 @@ body {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
+  font-family: 'Lobster', cursive;
+  padding-top: 40px;
   font-size: 2rem;
   color: aqua;
   height: 100%;
@@ -195,15 +204,17 @@ body {
 .sidebar .after {
   width: 800px;
   margin: auto;
-  background-color: red;
+  background-color: black;
   height: auto;
   text-align: center;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  font-family: 'Lobster', cursive;
 }
 .sidebar .after main {
   font-size: 1.5rem;
   color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
 }
 .sidebar .after main p {
   margin: 10px;
@@ -211,16 +222,49 @@ body {
 .sidebar .after section {
   font-size: 1.5rem;
   color: white;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
-.sidebar .after section p {
-  margin: 10px;
+.sidebar .after section #Skills {
+  font-family: 'Lobster', cursive;
+  border-collapse: collapse;
+  width: auto;
+  margin-top: 30px;
 }
-.sidebar .after ul {
-  font-size: 2rem;
-  border: 1px solid white;
+.sidebar .after section #Skills td,
+.sidebar .after section #Skills th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.sidebar .after section #Skills tr:nth-child(even) {
+  background-color: black;
+}
+.sidebar .after section #Skills th {
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-align: center;
-  width: 48%;
-  border-bottom: 1px solid white;
-  margin: 1px;
-  padding: 6px;
+  background-color: black;
+  color: white;
+}
+.sidebar .after section #history {
+  font-family: 'Lobster', cursive;
+  border-collapse: collapse;
+  width: auto;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+.sidebar .after section #history td,
+.sidebar .after section #history th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.sidebar .after section #history tr:nth-child(even) {
+  background-color: black;
+}
+.sidebar .after section #history th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: black;
+  color: white;
 }
