@@ -54,6 +54,201 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	width: 100%;
 }
 
+@deepsea: blue;
+
+@darkness: black;
+
+@vision: black;
+
+@light: white;
+
+@english: 'Lobster', cursive;
+
+.mixins {
+	font-size: 5rem;
+	color: purple;
+}
+
+.secondthought {
+	font-size: 2rem;
+	color: aqua;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	margin: 0rem;
+	margin-bottom: 0rem;
+	background-color: @vision;
+	@media (max-width: 500px){
+		width: 500px;
+		height: auto;
+	}
+
+	h1 {
+		.mixins();
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		font-family: @english;
+		@media (max-width: 500px) {
+			width: 500px;
+			text-align: center;
+			display: flex;
+		  }
+	}
+	
+	h2 {
+		.secondthought();
+		background-color: @darkness;
+		text-align: center;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		font-family: @english;
+		@media (max-width: 500px) {
+			width: 500px;
+			justify-content: center;
+			display: flex;
+		  }
+	}
+	img {
+		width: 100%;
+		height: 60%;
+		@media (max-width: 500px) {
+			display: none;
+		  }
+	}
+}
+
+.sidebar {
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin: 0rem;
+	@media (max-width: 500px) {
+		height: 200%;
+	}
+
+	nav {
+		width: auto;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		
+
+		a:hover {
+			color: @deepsea;
+		}
+		a {
+
+			background-color: @darkness;
+			width: auto;
+			height: auto;
+			display: flex;
+			justify-content: space-evenly;
+			text-decoration: none;
+			font-family: @english;
+			.secondthought ();
+			height: 100%;
+			@media (max-width: 500px){
+
+				color: @light;
+				width: 100%;
+				justify-content: space-evenly;
+			}
+	
+		}
+	}
+
+
+	.after {
+		width: 100%;
+		
+		background-color: @vision;
+		height: auto;
+		text-align: center;
+		font-family: @english;
+		@media (max-width: 500px){
+			width: 100%;
+			height: auto;
+			text-align: center;
+	
+		}
+	
+		main {
+			font-size: 1.5rem;
+			color: @light;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-right: 10px;
+			p {
+				margin: 10px;
+			}
+		}
+
+		section {
+			font-size: 1.5rem;
+			color: @light;
+			justify-content: center;
+			@media (max-width: 500px) {
+			display: flex;
+			flex-flow: row wrap;
+			width: auto;
+			height: auto;
+			
+		
+		  }
+			#Skills {
+				font-family: @english;
+				border-collapse: collapse;
+				width: auto;
+				margin-top: 1rem;
+				margin-left: auto;
+				margin-right: auto;
+			  }
+			  #Skills td, #Skills th {
+				border: 1px solid #ddd;
+				padding: 8px;
+			  }
+			  #Skills tr:nth-child(even){background-color: @vision;}
+	
+				#Skills th {
+				  padding-top: 12px;
+				  padding-bottom: 12px;
+				  text-align: center;
+				  background-color: @vision;
+				  color: @light;
+				}
+		
+		#history {
+			font-family: @english;
+			border-collapse: collapse;
+			width: auto;
+			margin-top: 5%;
+			margin-right: auto;
+			margin-left: auto;
+		  }
+		  #history td, #history th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		  }
+		  #history tr:nth-child(even){background-color: @vision;}
+
+			#history th {
+  			padding-top: 12px;
+  			padding-bottom: 12px;
+  			text-align: center;
+  			background-color: @vision;
+  			color: @light;
+			}
+		
+	
+		// padding-bottom: 20px;
+		padding-left: 20px;
+		}
+	}
+}
